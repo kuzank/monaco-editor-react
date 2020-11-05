@@ -66,7 +66,10 @@ export class AdvancedTypescriptEditor extends Component {
             selectOnLineNumbers: true,
             model: monaco.editor.getModel(Uri.parse("file:///main.tsx"))
                 ||
-                monaco.editor.createModel(code, curLanguage, monaco.Uri.parse("file:///main.tsx"))
+                monaco.editor.createModel(code, curLanguage, monaco.Uri.parse("file:///main.tsx")),
+            minimap: {
+                enabled:true
+            }
         }
         return (
             <div>
@@ -79,7 +82,7 @@ export class AdvancedTypescriptEditor extends Component {
                 <div className="momacoClass">
                     <MonacoEditor
                         language={this.state.curLanguage}
-                        theme="vs-dark"
+                        theme="vs"
                         defaultValue=''
                         value={this.state.code}
                         onChange={this.onMonacoChange}
