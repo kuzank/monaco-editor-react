@@ -12,7 +12,7 @@ ROOT_DIR=$(cd `dirname $0`/..; pwd)
 # 确保脚本抛出遇到的错误
 set -e
 
-# cd "${ROOT_DIR}/docs"
+cd "${ROOT_DIR}"
 
 # 生成静态文件
 npm install
